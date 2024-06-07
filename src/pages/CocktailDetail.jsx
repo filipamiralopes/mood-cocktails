@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_URL } from "../config";
 
 const CocktailDetail = () => {
   const { cocktailId } = useParams();
@@ -11,7 +12,7 @@ const CocktailDetail = () => {
 
   const allCocktails = async () => {
     try {
-      const { data } = await axios("http://localhost:5005/drinks/");
+      const { data } = await axios(`${API_URL}/drinks/`);
       setCocktails(data);
     } catch (error) {
       console.log(error);
@@ -36,8 +37,6 @@ const CocktailDetail = () => {
     }
     return ingredients
   };
-
-  console.log(filteredCocktail);
 
   if (!filteredCocktail) {
     return <p>loading...</p>;
