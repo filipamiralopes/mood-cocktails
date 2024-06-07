@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../config";
+import CocktailCard from "../components/CocktailCard";
 
 const CocktailDetail = () => {
   const { cocktailId } = useParams();
@@ -28,26 +29,16 @@ const CocktailDetail = () => {
     }
   });
 
-  const getIngredients = (object) => {
-    let ingredients = []
-    for(let key in object) {
-        if (object[key]&& key.startsWith("strIngredient")){
-            ingredients.push(object[key])
-        }
-    }
-    return ingredients
-  };
+  
 
   if (!filteredCocktail) {
     return <p>loading...</p>;
   }
 
   return (
-    <div className="cocktail-detail">
-      <img src={filteredCocktail.nameThumb} style={{ width: "400px" }} />
-      <h1>{filteredCocktail.name}</h1>
-      <p>{getIngredients(filteredCocktail).join(" | ")}</p>
-    </div>
+    <>
+    <CocktailCard cocktail={filteredCocktail}/>
+    </>
   );
 };
 
