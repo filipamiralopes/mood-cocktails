@@ -5,3 +5,21 @@
 - Favourites / Cocktails drank already
 - About this bar
 */
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const SideBar = () => {
+  return (
+    <div className="sidebar">
+        <ul className='sidebar-list'>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="">Cocktail Menu</Link></li>
+            <li><Link to="">Add New Cocktail</Link></li>
+            <li><Link to="">Favourites</Link></li>
+            <li><Link to="">About this Bar</Link></li>
+        </ul>
+    </div>
+  )
+}
+
+export default SideBar
