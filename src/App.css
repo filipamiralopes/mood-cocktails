@@ -76,3 +76,7 @@
 .cocktail-detail-buttons button{
     margin: 16px
 }
+
+.your-orders{
+    display: flex;
+}
