@@ -50,3 +50,29 @@
 .cocktail-list {
     margin-left: 20%;
 }
+.cocktail-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.cocktail-card{
+    border: 1px solid rgb(34, 33, 33);
+    padding: 24px
+}
+.cocktail-card h1{
+    margin-bottom: 4px;
+}
+.cocktail-card p{
+    margin-top: 4px;
+}
+
+.cocktail-detail-buttons{
+    display: flex;
+    margin-top: 32px;
+}
+
+.cocktail-detail-buttons button{
+    margin: 16px
+}

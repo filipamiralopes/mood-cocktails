@@ -5,7 +5,7 @@ import axios from "axios";
 import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
-const CocktailDetail = () => {
+const CocktailDetail = ({ handleOrder }) => {
   const { cocktailId } = useParams();
 
   const [cocktails, setCocktails] = useState([]);
@@ -29,16 +29,26 @@ const CocktailDetail = () => {
     }
   });
 
-  
-
   if (!filteredCocktail) {
     return <p>loading...</p>;
   }
 
   return (
-    <>
-    <CocktailCard cocktail={filteredCocktail}/>
-    </>
+    <div className="cocktail-detail">
+      <CocktailCard cocktail={filteredCocktail} />
+      <div className="cocktail-detail-buttons">
+        <button
+          onClick={() => {
+            handleOrder(filteredCocktail);
+          }}
+        >
+          Order
+        </button>
+        <Link to="/your-table">
+          <button>Check your orders</button>
+        </Link>
+      </div>
+    </div>
   );
 };
 
