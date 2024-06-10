@@ -15,19 +15,22 @@
     margin-left: 200px;
 }
 
+.body {
+    width: 85vw;
+}
+
 /*SIDE BAR*/
 
 .sidebar {
     left: 0; 
-    width: 200px;
+    /* width: 200px; */
     height: 90%;
     background-color: #383030;
     color: white;
     position: fixed;
     padding-top: 150px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    
-    
+    width: 15vw;
 }
 
 .sidebar-list {
@@ -81,3 +84,88 @@
     display: flex;
     margin-left: 300px;
 }
+
+  
+/* Add Cocktail Form Styles - Dark Theme */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.add-cocktail-form {
+  background-color: #1f1f1f;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  max-width: 600px;
+}
+
+.add-cocktail-form h3 {
+  color: #ff6f61;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-cocktail-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-cocktail-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #ff6f61;
+}
+
+.add-cocktail-form input,
+.add-cocktail-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.add-cocktail-form input[type="text"],
+.add-cocktail-form input[type="url"] {
+  height: 40px;
+}
+
+.add-cocktail-form button {
+  background-color: #ff6f61;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-cocktail-form button:hover {
+  background-color: #e05a50;
+}
+
+.add-cocktail-form .suggestion {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.add-cocktail-form .suggestion img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.add-cocktail-form .suggestion p {
+  margin: 5px 0;
+}
+
+
+  

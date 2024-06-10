@@ -5,25 +5,27 @@ import axios from "axios";
 import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
-const CocktailDetail = ({ handleOrder }) => {
+const CocktailDetail = ({ cocktails, handleOrder }) => {
+  console.log(cocktails)
   const { cocktailId } = useParams();
 
-  const [cocktails, setCocktails] = useState([]);
+  // const [cocktails, setCocktails] = useState([]);
   // const { cocktailId } = props;
 
-  const allCocktails = async () => {
-    try {
-      const { data } = await axios(`${API_URL}/drinks/`);
-      setCocktails(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    allCocktails();
-  }, []);
+  // const allCocktails = async () => { // TODO
+  //   try {
+  //     const { data } = await axios(`${API_URL}/drinks/`);
+  //     setCocktails(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // useEffect(() => {
+  //   allCocktails();
+  // }, []);
 
   const filteredCocktail = cocktails.find((oneCocktail) => {
+
     if (oneCocktail.id == cocktailId) {
       return true;
     }

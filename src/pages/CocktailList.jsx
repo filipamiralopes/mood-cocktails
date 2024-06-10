@@ -5,22 +5,9 @@ import CocktailCard from "../components/CocktailCard";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const CocktailList = () => {
-  const [cocktails, setCocktails] = useState([]);
+const CocktailList = ({cocktails, setCocktails}) => {
   const [searchState, setSearchState] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
-  useEffect(() => {
-    const fetchCocktails = async () => {
-      try {
-        const { data } = await axios.get("http://localhost:5005/drinks");
-        setCocktails(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchCocktails();
-  }, []);
 
   const handleSearchCocktail = async (event) => {
     event.preventDefault();
@@ -52,9 +39,9 @@ const CocktailList = () => {
       </form>
 
       <div className="cocktail-search">
-        {searchState !== "" &&
+        {(searchState !== "" && searchResults !== null) &&
           searchResults.map((oneCocktail) => (
-            <Link
+            <Link 
               to={`/cocktails/${oneCocktail.idDrink}`}
               key={oneCocktail.idDrink}
             >
