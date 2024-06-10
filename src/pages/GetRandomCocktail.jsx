@@ -23,7 +23,7 @@ const GetRandomCocktail = () => {
       }
     
       return (
-        <div>
+        <div className='random-cocktail-page'>
           <h1>{cocktail.strDrink}</h1>
           <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: '50%', height: 'auto' }} />
           <p>{cocktail.strInstructions}</p>

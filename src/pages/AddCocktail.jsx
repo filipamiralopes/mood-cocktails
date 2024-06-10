@@ -60,11 +60,13 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
       isUserCreated: true,
     };
 
-    setCocktails([newCocktail, ...cocktails]);
+    
     try { 
-      const response = await axios.post(`${API_URL}/drinks`, newCocktail);
-      console.log(response.data); 
+      const {data} = await axios.post(`${API_URL}/drinks`, newCocktail);
+      console.log(data); 
+      setCocktails([newCocktail, ...cocktails]);
       nav('/cocktails/');
+      window.location.reload();
       } catch (error) {
         console.log('Failed to add cocktail:', error);
     }

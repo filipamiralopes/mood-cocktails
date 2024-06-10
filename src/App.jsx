@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
 import GetRandomCocktail from "./pages/GetRandomCocktail";
+import { API_URL } from "./config";
 
 function App() {
   const [cocktails, setCocktails] = useState([]); // Initialize state
@@ -21,8 +22,8 @@ function App() {
   useEffect(() => {
     const fetchCocktails = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5005/drinks");
-        setCocktails(data);
+        const { data } = await axios.get(`${API_URL}/drinks`);
+        setCocktails(data.reverse());
       } catch (error) {
         console.log(error);
       }
