@@ -6,11 +6,7 @@ import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
 const CocktailDetail = ({ cocktails, handleOrder }) => {
-  const { cocktailId } = useParams()
-  console.log(cocktailId)
-
-
-
+  const { cocktailId } = useParams();
   const filteredCocktail = cocktails.find((oneCocktail) => {
 
     if (oneCocktail.id == cocktailId) {
@@ -36,6 +32,7 @@ const CocktailDetail = ({ cocktails, handleOrder }) => {
         <Link to="/your-table">
           <button>Check your orders</button>
         </Link>
+        <button onClick={() => handleDelete(filteredCocktail.id)}>Delete</button>
       </div>
     </div>
   );

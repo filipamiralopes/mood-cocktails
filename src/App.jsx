@@ -14,10 +14,13 @@ import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
 import GetRandomCocktail from "./pages/GetRandomCocktail";
 import { API_URL } from "./config";
+import { useNavigate } from "react-router-dom";
+
 
 function App() {
   const [cocktails, setCocktails] = useState([]); // Initialize state
   const [orderedCocktails, setOrderedCockails] = useState([]);
+  const nav = useNavigate();
 
   useEffect(() => {
     const fetchCocktails = async () => {
@@ -33,6 +36,11 @@ function App() {
 
   function handleOrder(cocktail) {
     setOrderedCockails([...orderedCocktails, cocktail]);
+  }
+
+  const handleDelete = (id) => {
+    nav("/cocktails");
+    setCocktails(cocktails.filter(cocktail => cocktail.id !== id));
   }
 
   return (
@@ -52,7 +60,7 @@ function App() {
           <Route
             path="/cocktails/:cocktailId"
             element={
-              <CocktailDetail cocktails={cocktails} handleOrder={handleOrder} />
+              <CocktailDetail cocktails={cocktails} handleOrder={handleOrder} handleDelete={handleDelete} />
             }
           />
           <Route
