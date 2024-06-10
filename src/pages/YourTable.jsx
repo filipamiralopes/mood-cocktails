@@ -4,7 +4,7 @@ import CocktailCard from "../components/CocktailCard";
 const YourTable = ({ orderedCocktails }) => {
   return (
     <>
-      <div className="your-orders">
+      <div className="your-table">
         <h1>Your orders</h1>
         {orderedCocktails.map((cocktail) => {
           return <CocktailCard key={cocktail.id} cocktail={cocktail} />;

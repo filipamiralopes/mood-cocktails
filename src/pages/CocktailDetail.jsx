@@ -6,24 +6,7 @@ import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
 const CocktailDetail = ({ cocktails, handleOrder }) => {
-  console.log(cocktails)
   const { cocktailId } = useParams();
-
-  // const [cocktails, setCocktails] = useState([]);
-  // const { cocktailId } = props;
-
-  // const allCocktails = async () => { // TODO
-  //   try {
-  //     const { data } = await axios(`${API_URL}/drinks/`);
-  //     setCocktails(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   allCocktails();
-  // }, []);
-
   const filteredCocktail = cocktails.find((oneCocktail) => {
 
     if (oneCocktail.id == cocktailId) {
@@ -49,6 +32,7 @@ const CocktailDetail = ({ cocktails, handleOrder }) => {
         <Link to="/your-table">
           <button>Check your orders</button>
         </Link>
+        <button onClick={() => handleDelete(filteredCocktail.id)}>Delete</button>
       </div>
     </div>
   );

@@ -11,17 +11,18 @@ const CocktailCard = ({ cocktail, searchResults }) => {
     }
     return ingredients;
   };
-
+  
+  
   return (
     <div className="cocktail-card">
       {searchResults !== undefined ? (
         <>
-          <img src={cocktail.strDrinkThumb} style={{ width: "400px" }} />
+          <img src={cocktail.strDrinkThumb} style={{ width: "300px" }} />
           <h1>{cocktail.strDrink}</h1>
         </>
       ) : (
         <>
-          <img src={cocktail.image} style={{ width: "400px" }} />
+          <img src={cocktail.image} style={{ width: "300px" }} />
           <h1>{cocktail.name}</h1>
         </>
       )}
