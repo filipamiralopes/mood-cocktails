@@ -22,6 +22,8 @@ const CocktailList = ({cocktails, setCocktails}) => {
     }
   };
 
+  
+
   return (
     <div className="cocktail-list">
       <h1>Cocktail Menu</h1>
@@ -56,9 +58,14 @@ const CocktailList = ({cocktails, setCocktails}) => {
       <div className="cocktail-list-grid">
         {cocktails.map((oneCocktail) => {
           return (
-            <Link to={`/cocktails/${oneCocktail.id}`} key={oneCocktail.id}>
-              <CocktailCard cocktail={oneCocktail} />
-            </Link>
+            <div key={oneCocktail.id}>
+               <Link to={`/cocktails/${oneCocktail.id}`} >
+               <CocktailCard cocktail={oneCocktail}/>
+               </Link>
+               
+            </div>
+           
+            
           );
         })}
       </div>

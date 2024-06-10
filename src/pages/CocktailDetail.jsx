@@ -5,7 +5,7 @@ import axios from "axios";
 import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
-const CocktailDetail = ({ cocktails, handleOrder }) => {
+const CocktailDetail = ({ cocktails, handleOrder, handleDelete }) => {
   console.log(cocktails)
   const { cocktailId } = useParams();
 
@@ -23,6 +23,7 @@ const CocktailDetail = ({ cocktails, handleOrder }) => {
   // useEffect(() => {
   //   allCocktails();
   // }, []);
+
 
   const filteredCocktail = cocktails.find((oneCocktail) => {
 
@@ -49,6 +50,7 @@ const CocktailDetail = ({ cocktails, handleOrder }) => {
         <Link to="/your-table">
           <button>Check your orders</button>
         </Link>
+        <button onClick={() => handleDelete(filteredCocktail.id)}>Delete</button>
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ const CocktailCard = ({ cocktail, searchResults }) => {
     }
     return ingredients;
   };
-
+  
+  
   return (
     <div className="cocktail-card">
       {searchResults !== undefined ? (
