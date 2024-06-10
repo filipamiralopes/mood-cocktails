@@ -12,6 +12,7 @@ import AddCocktail from "./pages/AddCocktail";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
+import GetRandomCocktail from "./pages/GetRandomCocktail";
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
             <AddCocktail cocktails={cocktails} setCocktails={setCocktails} />
           }
         />
+        <Route path="/random-cocktail" element={<GetRandomCocktail />} />
         <Route path="/about" element={<AboutPage />}/>
         <Route path="*" element={<NotFoundPage />}/>
       </Routes>
