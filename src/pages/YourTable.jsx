@@ -4,8 +4,8 @@ import CocktailCard from "../components/CocktailCard";
 const YourTable = ({ orderedCocktails }) => {
   return (
     <>
-      <h1>Your orders</h1>
       <div className="your-orders">
+        <h1>Your orders</h1>
         {orderedCocktails.map((cocktail) => {
           return <CocktailCard key={cocktail.id} cocktail={cocktail} />;
         })}
@@ -15,5 +15,3 @@ const YourTable = ({ orderedCocktails }) => {
 };
 
 export default YourTable;
-
-// http://localhost:5174/cocktails/17225

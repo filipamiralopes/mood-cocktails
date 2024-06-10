@@ -15,7 +15,7 @@ const SideBar = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/cocktails">Cocktail Menu</Link></li>
             <li><Link to="">Add New Cocktail</Link></li>
-            <li><Link to="">Favourites</Link></li>
+            <li><Link to="/your-table">Your Table</Link></li>
             <li><Link to="">About this Bar</Link></li>
         </ul>
     </div>

@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cocktails" element={<CocktailList />} />
-        <Route path="/cocktails/:cocktailId" element={<CocktailDetail />} />
+        <Route path="/cocktails/:cocktailId" element={<CocktailDetail handleOrder={handleOrder}/>} />
         <Route
           path="/cocktails/:cocktailId"
           element={<CocktailDetail handleOrder={handleOrder} />}
