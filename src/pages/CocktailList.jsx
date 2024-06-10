@@ -35,7 +35,6 @@ const CocktailList = ({cocktails, setCocktails}) => {
           }}
           placeholder="Search for a cocktail..."
         />
-        <button type="submit">Search</button>
       </form>
 
       <div className="cocktail-search">

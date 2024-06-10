@@ -13,7 +13,6 @@ import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
 
-
 function App() {
   const [cocktails, setCocktails] = useState([]); // Initialize state
   const [orderedCocktails, setOrderedCockails] = useState([]);
@@ -37,29 +36,37 @@ function App() {
   return (
     <>
       <Navbar />
-      <SideBar />
+      <div className="body-page">
+        <SideBar />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/cocktails" element={<CocktailList cocktails={cocktails} setCocktails={setCocktails}/>} />
-        <Route
-          path="/cocktails/:cocktailId"
-          element={<CocktailDetail cocktails={cocktails} handleOrder={handleOrder} />}
-        />
-        <Route
-          path="/your-table"
-          element={<YourTable orderedCocktails={orderedCocktails} />}
-        />
-        <Route
-          path="/add-cocktail"
-          element={
-            <AddCocktail cocktails={cocktails} setCocktails={setCocktails} />
-          }
-        />
-        <Route path="/about" element={<AboutPage />}/>
-        <Route path="*" element={<NotFoundPage />}/>
-      </Routes>
-
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/cocktails"
+            element={
+              <CocktailList cocktails={cocktails} setCocktails={setCocktails} />
+            }
+          />
+          <Route
+            path="/cocktails/:cocktailId"
+            element={
+              <CocktailDetail cocktails={cocktails} handleOrder={handleOrder} />
+            }
+          />
+          <Route
+            path="/your-table"
+            element={<YourTable orderedCocktails={orderedCocktails} />}
+          />
+          <Route
+            path="/add-cocktail"
+            element={
+              <AddCocktail cocktails={cocktails} setCocktails={setCocktails} />
+            }
+          />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
       <Footer />
     </>
   );
