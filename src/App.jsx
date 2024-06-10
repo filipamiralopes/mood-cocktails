@@ -6,8 +6,10 @@ import HomePage from './pages/HomePage'
 import SideBar from './components/SideBar'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import AddCocktail from './pages/AddCocktail'
 
 function App() {
+  const [cocktails, setCocktails] = useState([]); // Initialize state
 
   return (
     <>
@@ -16,6 +18,8 @@ function App() {
 
      <Routes>
        <Route path='/' element={<HomePage />} />
+       <Route path='/add-cocktail' element={<AddCocktail cocktails={cocktails} 
+            setCocktails={setCocktails} />} />
      </Routes>
 
      <Footer />
