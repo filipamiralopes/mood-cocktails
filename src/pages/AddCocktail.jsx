@@ -43,14 +43,13 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
   const handleAddCocktail = async (event) => {
     event.preventDefault();
 
+    //prevents submission if the cocktail already exists
     if (existingCocktail || dbCocktail) {
             //alert('This cocktail already exists!');
       return;
     }
-
-    //const createdBy = currentUser.username;
-
     const newCocktail = {
+      id,
       name,
       image,
       strIngredient1,
