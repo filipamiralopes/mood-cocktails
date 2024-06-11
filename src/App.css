@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
   background-color: #d6a5a5;
   display: flex;
@@ -7,7 +8,23 @@
   padding: 0 1vw;
   height: 7vh;
 }
+.navbar-logo {
+  height: 40px;
+  padding-left: 37%;
+  justify-content: center;
+  align-items: center;  
+  
+} 
+.navbar-menu {
+  height: 30px;
+  width: 30px;
+}
+.navbar h3 {
+  padding-left: 740px;
+  color: black;
+}
 
+/* Body */
 .body-page{
   display: flex;
   flex-direction: row;

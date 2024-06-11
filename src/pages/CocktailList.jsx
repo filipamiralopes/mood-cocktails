@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const CocktailList = ({ cocktails, setCocktails }) => {
   const [searchState, setSearchState] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [error, setError] = useState(null);
 
   const handleSearchCocktail = async (event) => {
     event.preventDefault();
@@ -16,7 +17,13 @@ const CocktailList = ({ cocktails, setCocktails }) => {
       const { data } = await axios.get(
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchState}`
       );
-      setSearchResults(data.drinks);
+      if (!data.drinks) {
+        setError("No cocktail found!");
+      } else {
+        setSearchResults(data.drinks);
+        setError("");
+      }
+      
     } catch (error) {
       console.log(error);
     }
@@ -37,6 +44,7 @@ const CocktailList = ({ cocktails, setCocktails }) => {
         />
       </form>
 
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <div className="cocktail-search">
         {searchState !== "" &&
           searchResults !== null &&

@@ -5,7 +5,7 @@ import axios from "axios";
 import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
-const CocktailDetail = ({ cocktails, handleOrder, orderedCocktails }) => {
+const CocktailDetail = ({ cocktails, handleOrder, orderedCocktails, handleDelete}) => {
   const { cocktailId } = useParams();
   const filteredCocktail = cocktails.find((oneCocktail) => {
     if (oneCocktail.id == cocktailId) {
@@ -40,9 +40,7 @@ const CocktailDetail = ({ cocktails, handleOrder, orderedCocktails }) => {
             <button>Edit</button>
           </Link>
         )}
-        <button onClick={() => handleDelete(filteredCocktail.id)}>
-          Delete
-        </button>
+        {!filteredCocktail.isUserCreated ? null : <button onClick={() => handleDelete(filteredCocktail.id)}>Delete</button>}
       </div>
     </div>
   );
