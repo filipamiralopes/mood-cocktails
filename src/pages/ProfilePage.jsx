@@ -106,7 +106,7 @@ const ProfilePage = ({ currentUser }) => {
           />
         </label>
         {currentUser ? (
-          <button type="submit">Save Changes</button>
+          <button type="submit">Sign Up!</button>
         ) : (
           <button>Sign Up</button>
         )}

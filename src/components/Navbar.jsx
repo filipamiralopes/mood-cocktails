@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ currentUser }) => {
   return (
-    <div className='navbar'></div>
+    <div className='navbar'>
+      {currentUser && <span>Welcome, {currentUser.username}!</span>}
+    </div>
   )
 }
 

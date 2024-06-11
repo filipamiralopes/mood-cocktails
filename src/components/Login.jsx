@@ -22,7 +22,8 @@ const Login = ({ setCurrentUser }) => {
                 const doesPasswordMatch = foundUser.password === password;
                 if (doesPasswordMatch) {
                     setCurrentUser(foundUser);
-                    nav("/profile");
+                    nav("/");
+                    alert("Login successful!");
                 } else {
                     setError("Password incorrect. Please try again.");
                 }
