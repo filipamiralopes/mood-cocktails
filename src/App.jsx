@@ -15,11 +15,16 @@ import axios from "axios";
 import GetRandomCocktail from "./pages/GetRandomCocktail";
 import { API_URL } from "./config";
 import { useNavigate } from "react-router-dom";
+import ProfilePage from "./pages/ProfilePage";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+
 
 
 function App() {
-  const [cocktails, setCocktails] = useState([]); // Initialize state
+  const [cocktails, setCocktails] = useState([]); 
   const [orderedCocktails, setOrderedCockails] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null)
   const nav = useNavigate();
 
   useEffect(() => {
@@ -45,7 +50,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <div className="body-page">
         <SideBar />
 
@@ -76,6 +81,9 @@ function App() {
           <Route path="/random-cocktail" element={<GetRandomCocktail />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
+          <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
+          <Route path="/signup" element={<Signup setCurrentUser={setCurrentUser} />} />
         </Routes>
       </div>
       <Footer />

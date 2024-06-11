@@ -91,13 +91,13 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
             {existingCocktail && (
              <>
               <h2>{existingCocktail.name}</h2>
-               <img src={existingCocktail.image} alt={existingCocktail.name} style={{ maxWidth: '120%', height: 'auto' }} />
+               <img src={existingCocktail.image} alt={existingCocktail.name} style={{ maxWidth: '60%', height: 'auto' }} />
               </>
             )}
             {dbCocktail && (
               <>
                 <h2> {dbCocktail.name}</h2>
-                <img src={dbCocktail.image} alt={dbCocktail.name} style={{ maxWidth: '120%', height: 'auto' }} />
+                <img src={dbCocktail.image} alt={dbCocktail.name} style={{ maxWidth: '60%', height: 'auto' }} />
               </>
             )}
           </div>
@@ -113,7 +113,7 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
         </label>
         {image && (
           <div>
-            <img src={image} alt="Cocktail Preview" style={{ maxWidth: '100%', height: 'auto' }} />
+            <img src={image} alt="Cocktail Preview" style={{ maxWidth: '60%', height: 'auto' }} />
           </div>
         )}
         <label>
@@ -146,12 +146,13 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
         <label>
           Remarks:
           <textarea
+            className="textarea-remarks"
             value={remarks}
             onChange={(event) => setRemarks(event.target.value)}
             placeholder="Say something about your cocktail....,other ingredients, etc."
           />
         </label>
-        <button type="submit" disabled={!!existingCocktail || !!dbCocktail}>Add your cocktail!</button>
+        <button type="submit" disabled={!!existingCocktail || !!dbCocktail}>Craft Your Cocktail!</button>
       </form>
     </div>
   );
