@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Pacifico&display=swap');
+
 body {
   margin: 0;
+}
+
+h1, h2, h3{
+  font-family: Amatic SC;
+}
+p, h4, h5{
+  font-family: Hind Siliguri;
 }
 
 button {

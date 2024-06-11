@@ -51,7 +51,7 @@ const ProfilePage = ({ currentUser }) => {
   };
 
   return (
-    <div>
+    <div className='profile-page'>
       <h2>User Profile</h2>
       {message && <p>{message}</p>}
       <div>

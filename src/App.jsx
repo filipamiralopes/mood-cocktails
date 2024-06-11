@@ -73,7 +73,7 @@ function App() {
     <>
       <Navbar currentUser={currentUser} />
       <div className="body-page">
-        <SideBar />
+        <SideBar currentUser={currentUser}/>
 
         <Routes>
           <Route path="/" element={<HomePage setCurrentUser={setCurrentUser}/>} />

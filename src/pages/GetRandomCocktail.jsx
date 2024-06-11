@@ -24,7 +24,7 @@ const GetRandomCocktail = () => {
       return (
         <div className='random-cocktail-page'>
           <h1>{cocktail.strDrink}</h1>
-          <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: '50%', height: 'auto' }} />
+          <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: "300px" }} />
           <p>{cocktail.strInstructions}</p>
           <button onClick={fetchRandomCocktail}>Get Another Random Cocktail</button>
         </div>
