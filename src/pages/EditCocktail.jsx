@@ -14,17 +14,17 @@ const EditCocktail = ({ cocktails, setCocktails }) => {
   const [strIngredient3, setIngredient3] = useState("");
   const [remarks, setRemarks] = useState("");
 
-// const cocktail = cocktails.find((drink) => drink.id === cocktailId);
+  // const cocktail = cocktails.find((drink) => drink.id === cocktailId);
   useEffect(() => {
     const fetchCocktailData = async () => {
       try {
         const { data } = await axios.get(`${API_URL}/drinks/${cocktailId}`);
-        setName(data.name)
-        setImage(data.image)
-        setIngredient1(data.strIngredient1)
-        setIngredient2(data.strIngredient2)
-        setIngredient3(data.strIngredient3)
-        setRemarks(data.remarks)
+        setName(data.name);
+        setImage(data.image);
+        setIngredient1(data.strIngredient1);
+        setIngredient2(data.strIngredient2);
+        setIngredient3(data.strIngredient3);
+        setRemarks(data.remarks);
       } catch (error) {
         console.log(error);
       }
@@ -43,7 +43,6 @@ const EditCocktail = ({ cocktails, setCocktails }) => {
       strIngredient3,
       remarks,
     };
-    console.log(updatedCocktail)
     try {
       const { data } = await axios.patch(
         `${API_URL}/drinks/${cocktailId}`,
@@ -51,14 +50,13 @@ const EditCocktail = ({ cocktails, setCocktails }) => {
       );
       const updatedListOfCocktails = cocktails.map((drink) => {
         if (drink.id == cocktailId) {
-          return updatedCocktail;
+          return data;
         } else {
           return drink;
         }
       });
       setCocktails(updatedListOfCocktails);
       nav(`/cocktails/${cocktailId}`);
-      window.location.reload();
     } catch (error) {
       console.log(error);
     }

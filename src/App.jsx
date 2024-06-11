@@ -29,6 +29,7 @@ function App() {
         const { data } = await axios.get(`${API_URL}/drinks`);
         setCocktails(data.reverse());
       } catch (error) {
+        console.log("HERE?")
         console.log(error);
       }
     };
