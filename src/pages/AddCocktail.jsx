@@ -49,7 +49,6 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
       return;
     }
     const newCocktail = {
-      id,
       name,
       image,
       strIngredient1,

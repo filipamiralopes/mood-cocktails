@@ -50,12 +50,12 @@ function App() {
 
   return (
     <>
-      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      <Navbar />
       <div className="body-page">
         <SideBar />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage setCurrentUser={setCurrentUser} />} />
           <Route
             path="/cocktails"
             element={

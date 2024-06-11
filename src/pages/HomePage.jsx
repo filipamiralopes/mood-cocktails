@@ -12,6 +12,12 @@ const HomePage = ({ setCurrentUser }) => {
             <p>Don’t know what to drink?</p>
             <Link to="/random-cocktail"><button>Get Your Random Cocktail</button></Link>
         </div>
+        <div className='login-section'>
+            <Login setCurrentUser={setCurrentUser} />
+        </div>
+        <div className='signup-section'>
+            <Signup setCurrentUser={setCurrentUser} />
+        </div>
     </div>
   )
 }

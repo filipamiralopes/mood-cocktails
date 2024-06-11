@@ -1,4 +1,3 @@
-// ProfilePage.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -9,8 +8,11 @@ const ProfilePage = ({ currentUser }) => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [photo, setPhoto] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
+    if (!currentUser) return;
+
     const fetchUserData = async () => {
       try {
         const response = await axios.get(`http://localhost:5005/users/${currentUser.id}`);
@@ -27,9 +29,10 @@ const ProfilePage = ({ currentUser }) => {
     };
 
     fetchUserData();
-  }, []);
+  }, [currentUser]);
 
-  const handleUpdateProfile = async () => {
+  const handleUpdateProfile = async (e) => {
+    e.preventDefault();
     try {
       await axios.put(`http://localhost:5005/users/${currentUser.id}`, {
         username,
@@ -39,14 +42,17 @@ const ProfilePage = ({ currentUser }) => {
         email,
         photo,
       });
+      setMessage('Profile updated successfully.');
     } catch (error) {
       console.error('Error updating user data:', error);
+      setMessage('Error updating profile.');
     }
   };
 
   return (
     <div>
       <h2>User Profile</h2>
+      {message && <p>{message}</p>}
       <div>
         {photo && <img src={photo} alt="User" style={{ width: '100px', height: '100px', borderRadius: '50%' }} />}
       </div>
@@ -99,8 +105,11 @@ const ProfilePage = ({ currentUser }) => {
             onChange={(e) => setPhoto(e.target.value)}
           />
         </label>
-    
-        <button type="submit">Save Changes</button>
+        {currentUser ? (
+          <button type="submit">Save Changes</button>
+        ) : (
+          <button>Sign Up</button>
+        )}
       </form>
     </div>
   );

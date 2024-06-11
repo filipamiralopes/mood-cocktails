@@ -1,27 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Login from '../components/Login'
-import Signup from '../components/Signup'
+import React from 'react'
 
-const Navbar = ({ currentUser, setCurrentUser }) => {
+const Navbar = () => {
   return (
-    <div className='navbar'>
-      {currentUser ? (
-        <Link to="/profile">Profile</Link>
-      ) : (
-        <>
+    <div className='navbar'></div>
+  )
+}
 
-          <div className='login-section'>
-            <Login setCurrentUser={setCurrentUser} />
-        </div>
-        <div className='signup-section'>
-            <Signup setCurrentUser={setCurrentUser} />
-        </div>
-
-        </>
-      )}
-    </div>
-  );
-};
-
-export default Navbar;
+export default Navbar
