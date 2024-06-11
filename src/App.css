@@ -7,21 +7,17 @@
   width: 98vw;
   padding: 0 1vw;
   height: 7vh;
+  position: relative;
 }
 .navbar-logo {
-  height: 40px;
-  padding-left: 37%;
-  justify-content: center;
-  align-items: center;  
-  
+  height: 40px; 
 } 
-.navbar-menu {
-  height: 30px;
-  width: 30px;
-}
-.navbar h3 {
-  padding-left: 740px;
+
+.navbar h1 {
   color: black;
+  position: absolute;
+  left: 50%;
+  margin: 0;
 }
 
 /* Body */
@@ -283,4 +279,28 @@ body {
 .profile-page{
   min-height: 93vh;
   padding: 20px;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #d6a5a5;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.footer-detail a {
+  text-decoration: none;
+  color: black;
+}
+.footer-detail a:hover {
+  text-decoration: underline;
+}
+.footer-logo {
+  height: 25px;
+  margin-left: 10px;
 }
