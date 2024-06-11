@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import CocktailList from "./pages/CocktailList";
 import CocktailDetail from "./pages/CocktailDetail";
 import YourTable from "./pages/YourTable";
-import AddCocktail from "./pages/AddCocktail";
+import AddCocktail from "./pages/AddCocktail"; 
+import EditCocktail from "./pages/EditCocktail";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
@@ -74,6 +75,7 @@ function App() {
             }
           />
           <Route path="/random-cocktail" element={<GetRandomCocktail />} />
+          <Route path="/edit-cocktail" element={<EditCocktail />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
