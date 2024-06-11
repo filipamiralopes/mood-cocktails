@@ -123,13 +123,10 @@
 
 .your-table {
   min-height: 93vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.your-table h1 {
-  padding-left: 5%;
 }
 
 /* Add Cocktail Form Styles - Dark Theme */

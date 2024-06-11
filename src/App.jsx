@@ -60,7 +60,7 @@ function App() {
           <Route
             path="/cocktails/:cocktailId"
             element={
-              <CocktailDetail cocktails={cocktails} handleOrder={handleOrder} handleDelete={handleDelete} />
+              <CocktailDetail cocktails={cocktails} handleOrder={handleOrder} handleDelete={handleDelete} orderedCocktails={orderedCocktails}/>
             }
           />
           <Route

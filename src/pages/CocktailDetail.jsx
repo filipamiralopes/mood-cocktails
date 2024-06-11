@@ -5,7 +5,7 @@ import axios from "axios";
 import { API_URL } from "../config";
 import CocktailCard from "../components/CocktailCard";
 
-const CocktailDetail = ({ cocktails, handleOrder }) => {
+const CocktailDetail = ({ cocktails, handleOrder, orderedCocktails}) => {
   const { cocktailId } = useParams();
   const filteredCocktail = cocktails.find((oneCocktail) => {
 
@@ -22,6 +22,7 @@ const CocktailDetail = ({ cocktails, handleOrder }) => {
     <div className="cocktail-detail">
       <CocktailCard cocktail={filteredCocktail} />
       <div className="cocktail-detail-buttons">
+        {!orderedCocktails.includes(filteredCocktail) ? (
         <button
           onClick={() => {
             handleOrder(filteredCocktail);
@@ -29,6 +30,7 @@ const CocktailDetail = ({ cocktails, handleOrder }) => {
         >
           Order
         </button>
+        ): <button>Ordered ✔</button>}
         <Link to="/your-table">
           <button>Check your orders</button>
         </Link>
