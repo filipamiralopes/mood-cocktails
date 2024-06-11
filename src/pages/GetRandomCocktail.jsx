@@ -12,7 +12,7 @@ const GetRandomCocktail = () => {
       const fetchRandomCocktail = async () => {
         try {
           const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php');
-          setCocktail(response.data.drinks[0]); // The API returns an array of drinks
+          setCocktail(response.data.drinks[0]); 
         } catch (error) {
           console.error('Error fetching random cocktail:', error);
         }

@@ -16,11 +16,16 @@ import axios from "axios";
 import GetRandomCocktail from "./pages/GetRandomCocktail";
 import { API_URL } from "./config";
 import { useNavigate } from "react-router-dom";
+import ProfilePage from "./pages/ProfilePage";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+
 
 
 function App() {
-  const [cocktails, setCocktails] = useState([]); // Initialize state
+  const [cocktails, setCocktails] = useState([]); 
   const [orderedCocktails, setOrderedCockails] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null)
   const nav = useNavigate();
 
   useEffect(() => {
@@ -35,6 +40,19 @@ function App() {
     };
     fetchCocktails();
   }, []);
+
+  useEffect(() => {
+    const checkLoggedInUser = async () => {
+      try {
+        const { data } = await axios.get(`${API_URL}/users`);
+        setCurrentUser(response.data.user);
+      } catch (error) {
+        setCurrentUser(null);
+      }
+    };
+    checkLoggedInUser();
+  }, []);
+
 
   function handleOrder(cocktail) {
     setOrderedCockails([...orderedCocktails, cocktail]);
@@ -57,12 +75,12 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar currentUser={currentUser} />
       <div className="body-page">
         <SideBar />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage setCurrentUser={setCurrentUser}/>} />
           <Route
             path="/cocktails"
             element={
@@ -89,6 +107,9 @@ function App() {
           <Route path="/edit-cocktail/:cocktailId" element={<EditCocktail cocktails={cocktails} setCocktails={setCocktails}/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
+          <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
+          <Route path="/signup" element={<Signup setCurrentUser={setCurrentUser} />} />
         </Routes>
       </div>
       <Footer />

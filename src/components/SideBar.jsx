@@ -6,20 +6,46 @@
 - About this bar
 */
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+
 
 const SideBar = () => {
   return (
     <div className="sidebar">
         <ul className='sidebar-list'>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/cocktails">Cocktail Menu</Link></li>
-            <li><Link to="/your-table">Your Table</Link></li>
-            <li><Link to="/add-cocktail">Craft Your Cocktail</Link></li>
-            <li><Link to="/about">About this Bar</Link></li>
-        </ul>
-    </div>
-  )
-}
+        <li>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/cocktails" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Cocktail Menu
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/your-table" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Your Table
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-cocktail" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Craft Your Cocktail
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            About this Bar
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/profile" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Your private bar          
+            </NavLink>
+        </li>
 
+      </ul>
+    </div>
+  );
+};
 export default SideBar

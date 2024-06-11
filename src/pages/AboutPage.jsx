@@ -31,7 +31,7 @@ const AboutPage = () => {
         <h4>Farnoush Daliran</h4>
         <a href ="https://github.com/farnoushdf" >GitHub</a>    
         </div>
-        <div className="team-member">Bob</div>
+        <div className="team-member"></div>
 
         <div className="team-member3">
         <h4>Dalin Fangloy</h4>

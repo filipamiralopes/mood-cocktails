@@ -43,13 +43,11 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
   const handleAddCocktail = async (event) => {
     event.preventDefault();
 
+    //prevents submission if the cocktail already exists
     if (existingCocktail || dbCocktail) {
             //alert('This cocktail already exists!');
       return;
     }
-
-    //const createdBy = currentUser.username;
-
     const newCocktail = {
       name,
       image,
@@ -145,12 +143,13 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
         <label>
           Remarks:
           <textarea
+            className="textarea-remarks"
             value={remarks}
             onChange={(event) => setRemarks(event.target.value)}
             placeholder="Say something about your cocktail....,other ingredients, etc."
           />
         </label>
-        <button type="submit" disabled={!!existingCocktail || !!dbCocktail}>Add your cocktail!</button>
+        <button type="submit" disabled={!!existingCocktail || !!dbCocktail}>Craft Your Cocktail!</button>
       </form>
     </div>
   );
