@@ -75,7 +75,7 @@ function App() {
             }
           />
           <Route path="/random-cocktail" element={<GetRandomCocktail />} />
-          <Route path="/edit-cocktail" element={<EditCocktail />} />
+          <Route path="/edit-cocktail/:cocktailId" element={<EditCocktail cocktails={cocktails} setCocktails={setCocktails}/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

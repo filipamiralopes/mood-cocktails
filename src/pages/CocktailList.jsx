@@ -5,7 +5,7 @@ import CocktailCard from "../components/CocktailCard";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const CocktailList = ({cocktails, setCocktails}) => {
+const CocktailList = ({ cocktails, setCocktails }) => {
   const [searchState, setSearchState] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -21,8 +21,6 @@ const CocktailList = ({cocktails, setCocktails}) => {
       console.log(error);
     }
   };
-
-  
 
   return (
     <div className="cocktail-list">
@@ -40,9 +38,10 @@ const CocktailList = ({cocktails, setCocktails}) => {
       </form>
 
       <div className="cocktail-search">
-        {(searchState !== "" && searchResults !== null) &&
+        {searchState !== "" &&
+          searchResults !== null &&
           searchResults.map((oneCocktail) => (
-            <Link 
+            <Link
               to={`/cocktails/${oneCocktail.idDrink}`}
               key={oneCocktail.idDrink}
             >
@@ -58,13 +57,10 @@ const CocktailList = ({cocktails, setCocktails}) => {
         {cocktails.map((oneCocktail) => {
           return (
             <div key={oneCocktail.id}>
-               <Link to={`/cocktails/${oneCocktail.id}`} >
-               <CocktailCard cocktail={oneCocktail}/>
-               </Link>
-               
+              <Link to={`/cocktails/${oneCocktail.id}`}>
+                <CocktailCard cocktail={oneCocktail} />
+              </Link>
             </div>
-           
-            
           );
         })}
       </div>

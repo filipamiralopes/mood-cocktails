@@ -92,13 +92,13 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
             {existingCocktail && (
              <>
               <h2>{existingCocktail.name}</h2>
-               <img src={existingCocktail.image} alt={existingCocktail.name} style={{ maxWidth: '120%', height: 'auto' }} />
+               <img src={existingCocktail.image} alt={existingCocktail.name} style={{ maxWidth: '50%', height: 'auto' }} />
               </>
             )}
             {dbCocktail && (
               <>
                 <h2> {dbCocktail.name}</h2>
-                <img src={dbCocktail.image} alt={dbCocktail.name} style={{ maxWidth: '120%', height: 'auto' }} />
+                <img src={dbCocktail.image} alt={dbCocktail.name} style={{ maxWidth: '50%', height: 'auto' }} />
               </>
             )}
           </div>
@@ -114,7 +114,7 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
         </label>
         {image && (
           <div>
-            <img src={image} alt="Cocktail Preview" style={{ maxWidth: '100%', height: 'auto' }} />
+            <img src={image} alt="Cocktail Preview" style={{ maxWidth: '50%', height: 'auto' }} />
           </div>
         )}
         <label>

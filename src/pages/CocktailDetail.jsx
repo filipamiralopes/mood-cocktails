@@ -36,7 +36,7 @@ const CocktailDetail = ({ cocktails, handleOrder, orderedCocktails }) => {
           <button>Check your orders</button>
         </Link>
         {!filteredCocktail.isUserCreated ? null : (
-          <Link to="/edit-cocktail">
+          <Link to={`/edit-cocktail/${filteredCocktail.id}`}>
             <button>Edit</button>
           </Link>
         )}
