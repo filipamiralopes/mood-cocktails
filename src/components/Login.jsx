@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../config';
 
 const Login = ({ setCurrentUser }) => {
     const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ const Login = ({ setCurrentUser }) => {
         e.preventDefault();
         try {
             // fetch all users
-            const { data } = await axios.get("http://localhost:5005/users");
+            const { data } = await axios.get(`${API_URL}/users`);
             // find the user with matching username
             const foundUser = data.find((oneUser) => oneUser.username.toLowerCase() === username.toLowerCase());
             if (!foundUser) {

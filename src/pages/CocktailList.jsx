@@ -1,6 +1,4 @@
-// DELETE
-// Implement search (decide if on API or on our db)
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CocktailCard from "../components/CocktailCard";
 import axios from "axios";
 import { Link } from "react-router-dom";

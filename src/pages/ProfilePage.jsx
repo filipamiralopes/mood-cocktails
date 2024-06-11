@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL } from '../config';
 
 const ProfilePage = ({ currentUser }) => {
   const [username, setUsername] = useState('');
@@ -15,7 +16,7 @@ const ProfilePage = ({ currentUser }) => {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5005/users/${currentUser.id}`);
+        const response = await axios.get(`${API_URL}/users/${currentUser.id}`);
         const userData = response.data;
         setUsername(userData.username);
         setPassword(userData.password); 
@@ -34,7 +35,7 @@ const ProfilePage = ({ currentUser }) => {
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5005/users/${currentUser.id}`, {
+      await axios.put(`${API_URL}/users/${currentUser.id}`, {
         username,
         password, 
         firstName,

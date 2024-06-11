@@ -1,4 +1,3 @@
-// axios.get("www.thecocktaildb.com/api/json/v1/1/random.php")
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 

@@ -1,10 +1,3 @@
-/*
-- HomePage (as well as the logo on the Navbar)
-- Menu (CocktailList) --> Cocktail detail --> Edit and Delete
-- Add New Cocktail
-- Favourites / Cocktails drank already
-- About this bar
-*/
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 

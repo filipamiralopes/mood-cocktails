@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../config';
 
 const Signup = ({ setCurrentUser }) => {
     const [username, setUsername] = useState('');
@@ -14,7 +15,7 @@ const Signup = ({ setCurrentUser }) => {
         e.preventDefault();
         try {
             // send a POST request to db backend
-            const response = await axios.post('http://localhost:5005/users', { username, password });
+            const response = await axios.post(`${API_URL}/users`, { username, password });
             console.log('Signup response:', response.data);
             setCurrentUser(response.data); 
             nav('/profile'); 

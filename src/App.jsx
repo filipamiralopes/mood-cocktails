@@ -58,10 +58,6 @@ function App() {
     setOrderedCockails([...orderedCocktails, cocktail]);
   }
 
-  // const handleDelete = (id) => {
-  //   nav("/cocktails");
-  //   setCocktails(cocktails.filter(cocktail => cocktail.id !== id));
-  // }
   const handleDelete = async (id) => {
     try {  
       await axios.delete(`${API_URL}/drinks/${id}`);
