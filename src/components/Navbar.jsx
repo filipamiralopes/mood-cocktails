@@ -1,13 +1,16 @@
 import logo from '../image/logo.png'
-import menu from '../image/menu-icon.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({ currentUser }) => {
   return (
     <div className='navbar'>
-      <img src={menu} alt="Menu" className='navbar-menu'/>
-      <h3>Mood Cocktail Bar</h3>
-      <img src={logo}  alt="Logo" className='navbar-logo'/>
-      {currentUser && <span>Welcome, {currentUser.username}!</span>}
+      <Link to={"/"}>
+          <img src={logo}  alt="Logo" className='navbar-logo'/> 
+      </Link>
+
+      <h1>Mood Cocktail Bar</h1>    
+
+     {currentUser && <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>}
     </div>
   )
 }
