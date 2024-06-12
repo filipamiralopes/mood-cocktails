@@ -43,7 +43,7 @@ const CocktailList = ({ cocktails, setCocktails }) => {
       </form>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <div className="cocktail-search">
+      <div className="cocktail-list-grid">
         {searchState !== "" &&
           searchResults !== null &&
           searchResults.map((oneCocktail) => (
