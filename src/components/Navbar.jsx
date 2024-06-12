@@ -10,7 +10,7 @@ const Navbar = ({ currentUser }) => {
 
       <h1>Mood Cocktail Bar</h1>    
 
-     {currentUser && <span>Welcome, {currentUser.username}!</span>}
+     {currentUser && <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>}
     </div>
   )
 }

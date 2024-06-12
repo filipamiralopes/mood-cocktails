@@ -23,10 +23,11 @@ const GetRandomCocktail = () => {
     
       return (
         <div className='random-cocktail-page'>
+          <p>Based on how you're feeling, this cocktail is just what you need! Enjoy a sip that perfectly matches your mood and let it elevate your spirits</p>
           <h1>{cocktail.strDrink}</h1>
           <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: "300px" }} />
           <p>{cocktail.strInstructions}</p>
-          <button onClick={fetchRandomCocktail}>Get Another Random Cocktail</button>
+          <button onClick={fetchRandomCocktail}>Get Another Cocktail</button>
         </div>
       );
     };

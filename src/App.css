@@ -264,10 +264,51 @@ body {
 
 /*ABOUT US PAGE*/
 
-.about-us-container{
+.about {
+  /* background-image: url("./image/about-us.png");
+  background-size: cover; */
   min-height: 93vh;
   padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
+.about-container {
+ 
+  padding-left: 20px ;
+  display: flex;
+  justify-content: space-between;
+}
+.about-container-detail {
+ width: 50%;
+}
+.about-team {
+  width: 50%;
+  margin-left: 400px;
+}
+.about-team a {
+  color:  rgba(220, 148, 177, 0.718);
+  text-decoration: none;
+}
+.git-logo {
+  width: 20px;
+  border-radius: 5px;
+}
+.about-image {
+  margin-left: 18%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.about-image  img{
+  width: 1000px;
+  height: 700px; 
+  border-radius: 10px;
+}
+
+
+
+
 
 .random-cocktail-page{
   min-height: 93vh;
