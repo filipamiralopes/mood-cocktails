@@ -33,7 +33,6 @@ function App() {
         const { data } = await axios.get(`${API_URL}/drinks`);
         setCocktails(data.reverse());
       } catch (error) {
-        console.log("HERE?")
         console.log(error);
       }
     };
@@ -61,6 +60,7 @@ function App() {
     try {  
       await axios.delete(`${API_URL}/drinks/${id}`);
       setCocktails(cocktails.filter(cocktail => cocktail.id !== id));
+      setOrderedCockails(orderedCocktails.filter(cocktail => cocktail.id !== id));
       nav("/cocktails");
     } catch (error) {
       console.log( error);
