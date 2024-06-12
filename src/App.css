@@ -175,7 +175,6 @@
   width: 40%;
   text-wrap: wrap;
   font-style: italic;
-  /* border: 1px dashed whitesmoke; */
 }
 
 .cocktail-description p {
@@ -184,9 +183,6 @@
   overflow: auto;
   padding: 10px 0;
   line-height: 24px;
-}
-.cocktail-description h4{
-  
 }
 
 /*YOUR TABLE*/
