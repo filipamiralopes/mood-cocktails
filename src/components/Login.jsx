@@ -35,7 +35,7 @@ const Login = ({ setCurrentUser }) => {
     };
 
     return (
-        <div>
+        <div className="home-page">
             <h2>Login</h2>
             <form onSubmit={handleLogin}>
                 <label>

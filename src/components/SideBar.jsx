@@ -32,27 +32,19 @@ const SideBar = ({ currentUser }) => {
         </li>
         <li>
           <NavLink
-            to="/add-cocktail"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Craft Your Cocktail
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
-            About this Bar
+            About This Bar
           </NavLink>
         </li>
         <li>
           {currentUser ? (
             <NavLink
-              to="/profile"
+              to="/add-cocktail"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
-              Your private bar
+              Craft Your Cocktail 🍸
             </NavLink>
           ) : null}
         </li>
@@ -62,7 +54,17 @@ const SideBar = ({ currentUser }) => {
               to="/cocktails-for-you"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
-              Cocktails just for you 😉
+              Cocktails Just For You ✨
+            </NavLink>
+          ) : null}
+        </li>
+        <li>
+          {currentUser ? (
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Your Private Bar 👤
             </NavLink>
           ) : null}
         </li>

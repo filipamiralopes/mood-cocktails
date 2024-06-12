@@ -76,7 +76,7 @@ function App() {
         <SideBar currentUser={currentUser}/>
 
         <Routes>
-          <Route path="/" element={<HomePage setCurrentUser={setCurrentUser}/>} />
+          <Route path="/" element={<HomePage currentUser={currentUser} setCurrentUser={setCurrentUser}/>} />
           <Route
             path="/cocktails"
             element={

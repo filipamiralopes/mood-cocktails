@@ -26,7 +26,7 @@ const Signup = ({ setCurrentUser }) => {
     };
 
     return (
-        <div>
+        <div className="home-page">
             <h2>Signup</h2>
             <form onSubmit={handleSignup}>
                 <label>
