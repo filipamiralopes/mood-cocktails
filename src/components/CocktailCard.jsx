@@ -32,9 +32,12 @@ const CocktailCard = ({ cocktail, searchResults }) => {
         )}
       </div>
       <div className="cocktail-description">
-        {pathname === "/cocktails" || pathname === "/your-table" ? null : (
-          cocktail.strInstructions ? (<p>{cocktail.strInstructions}</p>) : (<p>{cocktail.remarks}</p>) 
-        )}
+        {pathname === "/cocktails" ||
+        pathname === "/your-table" ? null : cocktail.strInstructions ? (
+          <p>{cocktail.strInstructions}</p>
+        ) : cocktail.remarks ? (
+          <p>{cocktail.remarks}</p>
+        ) : null}
       </div>
     </div>
   );
