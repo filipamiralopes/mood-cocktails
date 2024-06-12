@@ -169,8 +169,9 @@ body {
   margin: 0;
   display: flex;
 }
-.cocktail-card h1 {
+.cocktail-card h2 {
   margin-bottom: 4px;
+  text-wrap: nowrap;
 }
 .cocktail-card p {
   margin-top: 4px;

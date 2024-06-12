@@ -43,7 +43,7 @@ const CocktailList = ({ cocktails, setCocktails }) => {
       </form>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <div className="cocktail-list-grid">
+      <div className="cocktail-list-grid user-cocktail-list">
         {searchState !== "" &&
           searchResults !== null &&
           searchResults.map((oneCocktail) => (
@@ -59,7 +59,7 @@ const CocktailList = ({ cocktails, setCocktails }) => {
           ))}
       </div>
 
-      <div className="cocktail-list-grid">
+      <div className="cocktail-list-grid user-cocktail-list">
         {cocktails.map((oneCocktail) => {
           return (
             <Link to={`/cocktails/${oneCocktail.id}`} key={oneCocktail.id}>

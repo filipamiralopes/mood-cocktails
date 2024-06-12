@@ -91,7 +91,7 @@ const EditCocktail = ({ cocktails, setCocktails }) => {
             <img
               src={image}
               alt="Cocktail Preview"
-              style={{ maxWidth: "50%", height: "auto" }}
+              style={{ height: '300px', width: '300px', objectFit: "contain", objectPosition: "100% 0"}}
             />
           </div>
         )}

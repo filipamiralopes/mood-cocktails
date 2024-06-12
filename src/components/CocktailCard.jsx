@@ -18,13 +18,13 @@ const CocktailCard = ({ cocktail, searchResults }) => {
       <div>
         {searchResults !== undefined ? (
           <>
-            <img src={cocktail.strDrinkThumb} style={{ width: "300px" }} />
-            <h1>{cocktail.strDrink}</h1>
+            <img src={cocktail.strDrinkThumb} style={{ height: '300px', width: '300px', objectFit: "cover", objectPosition: "100% 0"}} />
+            <h3>{cocktail.strDrink}</h3>
           </>
         ) : (
           <>
-            <img src={cocktail.image} style={{ width: "300px" }} />
-            <h1>{cocktail.name}</h1>
+            <img src={cocktail.image} style={{ height: '300px', width: '300px', objectFit: "cover", objectPosition: "100% 0"}} />
+            <h3>{cocktail.name}</h3>
           </>
         )}
         {pathname === "/cocktails" || pathname === "/cocktails/"  || pathname === "/your-table" ? null : (
