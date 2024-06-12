@@ -12,9 +12,8 @@
   height: 40px;
   padding-left: 37%;
   justify-content: center;
-  align-items: center;  
-  
-} 
+  align-items: center;
+}
 .navbar-menu {
   height: 30px;
   width: 30px;
@@ -25,7 +24,7 @@
 }
 
 /* Body */
-.body-page{
+.body-page {
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -46,10 +45,9 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
-  
 }
 
-.home-page-content{
+.home-page-content {
   padding: 40px;
 }
 
@@ -58,7 +56,7 @@
   max-width: 320px;
   margin-top: 20px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
@@ -98,7 +96,6 @@
   color: rgba(54, 5, 5, 0.8);
 }
 
-
 /*COCKTAIL LIST*/
 
 .cocktail-list {
@@ -109,7 +106,7 @@
   color: whitesmoke;
 }
 
-.cocktail-list-grid{
+.cocktail-list-grid {
   display: grid;
   grid-gap: 20px;
   justify-content: center;
@@ -119,7 +116,7 @@
 .search-bar {
   padding-bottom: 20px;
 }
-.search-bar input{
+.search-bar input {
   width: 50%;
   height: 20px;
 }
@@ -134,6 +131,7 @@
 
 .cocktail-card {
   margin: 0;
+  display: flex;
 }
 .cocktail-card h1 {
   margin-bottom: 4px;
@@ -154,6 +152,20 @@
   margin: 16px;
 }
 
+.cocktail-description {
+  padding: 100px 50px 50px 50px;
+  width: 40%;
+  text-wrap: wrap;
+  line-height: 24px;
+  font-style: italic;
+}
+
+.cocktail-description p {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  padding: 10px 0;
+}
 
 /*YOUR TABLE*/
 
@@ -179,7 +191,7 @@ body {
 
 .add-cocktail-form {
   min-height: 93vh;
-  background-color: #2b2b2b; 
+  background-color: #2b2b2b;
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
@@ -188,7 +200,7 @@ body {
 }
 
 .add-cocktail-form h3 {
-  color: #d6a5a5;  
+  color: #d6a5a5;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -201,7 +213,7 @@ body {
 .add-cocktail-form label {
   margin: 10px 0 5px;
   font-weight: bold;
-  color: #d6a5a5; 
+  color: #d6a5a5;
 }
 
 .add-cocktail-form input,
@@ -211,9 +223,9 @@ body {
   margin-left: 10px;
   font-size: 16px;
   border-radius: 4px;
-  border: 1px solid #383030;  
-  background-color: #333; 
-  color: #ffffff; 
+  border: 1px solid #383030;
+  background-color: #333;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -223,20 +235,19 @@ body {
 }
 
 .add-cocktail-form .textarea-remarks {
-  width: 95%; 
-  height: 150px; 
-  padding: 10px; 
-  border-radius: 4px; 
-  border: 1px solid #383030; 
-  background-color: #333; 
-  color: #ffffff; 
+  width: 95%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #383030;
+  background-color: #333;
+  color: #ffffff;
   resize: none; /*prevents resizing */
   margin-top: 30px;
 }
 
-
 .add-cocktail-form button {
-  background-color: rgba(220, 148, 177, 0.718);  
+  background-color: rgba(220, 148, 177, 0.718);
   color: #ffffff;
   padding: 10px;
   border: none;
@@ -244,15 +255,15 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 
 .add-cocktail-form button:hover {
-  background-color: #e05a50;  
+  background-color: #e05a50;
 }
 
 .add-cocktail-form .suggestion {
-  background-color: #383030;  
+  background-color: #383030;
   padding: 10px;
   border-radius: 4px;
   margin: 10px 0;
@@ -268,22 +279,20 @@ body {
   margin: 5px 0;
 }
 
-
 /*ABOUT US PAGE*/
 
-.about-us-container{
+.about-us-container {
   min-height: 93vh;
   padding: 20px;
 }
 
-.random-cocktail-page{
+.random-cocktail-page {
   min-height: 93vh;
   padding: 20px;
 }
-
 
 /*PROFILE PAGE*/
-.profile-page{
+.profile-page {
   min-height: 93vh;
   padding: 20px;
 }
