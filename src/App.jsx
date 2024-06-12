@@ -96,7 +96,7 @@ function App() {
           <Route
             path="/add-cocktail"
             element={
-              <AddCocktail cocktails={cocktails} setCocktails={setCocktails} />
+              <AddCocktail cocktails={cocktails} setCocktails={setCocktails} currentUser={currentUser}/>
             }
           />
           <Route path="/random-cocktail" element={<GetRandomCocktail />} />

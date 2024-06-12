@@ -27,18 +27,19 @@ const CocktailCard = ({ cocktail, searchResults }) => {
             <h1>{cocktail.name}</h1>
           </>
         )}
-        {pathname === "/cocktails" || pathname === "/your-table" ? null : (
+        {pathname === "/cocktails" || pathname === "/cocktails/"  || pathname === "/your-table" ? null : (
           <p>{getIngredients(cocktail).join(" | ")}</p>
         )}
       </div>
-      <div className="cocktail-description">
-        {pathname === "/cocktails" ||
-        pathname === "/your-table" ? null : cocktail.strInstructions ? (
-          <p>{cocktail.strInstructions}</p>
-        ) : cocktail.remarks ? (
-          <p>{cocktail.remarks}</p>
-        ) : null}
-      </div>
+      {pathname === "/cocktails" ||
+      pathname === "/cocktails/" ||
+      pathname === "/your-table" ? null : (
+        <div className="cocktail-description">
+          {cocktail.strInstructions && <p>{cocktail.strInstructions}</p>}
+          {cocktail.remarks && <p>{cocktail.remarks}</p>}
+          {cocktail.isUserCreated && <h4>Curated by {cocktail.createdBy}</h4>}
+        </div>
+      )}
     </div>
   );
 };

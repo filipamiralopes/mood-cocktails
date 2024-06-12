@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { API_URL } from "../config";
 
-const AddCocktail = ({ cocktails, setCocktails }) => {
+const AddCocktail = ({ cocktails, setCocktails, currentUser}) => {
   const nav = useNavigate();
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
@@ -56,6 +56,7 @@ const AddCocktail = ({ cocktails, setCocktails }) => {
       strIngredient3,
       remarks,
       isUserCreated: true,
+      createdBy: currentUser.username
     };
 
     
