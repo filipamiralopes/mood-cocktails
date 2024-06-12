@@ -19,8 +19,7 @@ import { useNavigate } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-
-
+import UserCocktail from "./pages/UserCocktail";
 
 function App() {
   const [cocktails, setCocktails] = useState([]); 
@@ -106,6 +105,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
           <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
           <Route path="/signup" element={<Signup setCurrentUser={setCurrentUser} />} />
+          <Route path="/cocktails-for-you" element={<UserCocktail currentUser={currentUser} />} />
         </Routes>
       </div>
       <Footer />
