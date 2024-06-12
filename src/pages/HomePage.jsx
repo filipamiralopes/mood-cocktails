@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 
-const HomePage = ({ currentUser }) => {
-  const [mood, setMood] = useState("");
+const HomePage = ({ currentUser, mood, setMood}) => {
 
   const handleInputChange = (e) => {
     setMood(e.target.value);
@@ -10,30 +9,30 @@ const HomePage = ({ currentUser }) => {
   return (
     <div className="home-page">
       <div className="home-page-content">
-        <h1>Welcome to Our Bar!</h1>
+        <h1>Welcome to Our Bar</h1>
         <p>Tell us how you feel and we will give you the right drink!</p>
         <input
           type="text"
-          placeholder="How doyou feel?"
+          placeholder="How do you feel?"
           value={mood}
           onChange={handleInputChange}
         />
         <br />
         <Link to={mood ? "/random-cocktail" : "#"}>
-          <button>Get Your Cocktail</button>
+          <button id="get-cocktail-btn">Get Your Cocktail!</button>
         </Link>
 
         {currentUser ? (
           <h3 id="logout-message">Refresh the page to Logout</h3>
         ) : (
           <div className="login-signup">
-            <div>
-              <p>Signup to access exclusive cocktails and create your own!</p>
+            <div className="signup">
+              <p>Signup to access exclusive cocktails and features!</p>
               <Link to="/signup">
                 <button>Signup</button>
               </Link>
             </div>
-            <div>
+            <div className="login">
               <p>Been here before?</p>
               <Link to="/login">
                 <button>Login</button>

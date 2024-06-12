@@ -25,6 +25,7 @@ function App() {
   const [cocktails, setCocktails] = useState([]); 
   const [orderedCocktails, setOrderedCockails] = useState([]);
   const [currentUser, setCurrentUser] = useState(null)
+  const [mood, setMood] = useState("");
   const nav = useNavigate();
 
   useEffect(() => {
@@ -75,7 +76,7 @@ function App() {
         <SideBar currentUser={currentUser}/>
 
         <Routes>
-          <Route path="/" element={<HomePage currentUser={currentUser} setCurrentUser={setCurrentUser}/>} />
+          <Route path="/" element={<HomePage currentUser={currentUser} mood={mood} setMood={setMood}/>} />
           <Route
             path="/cocktails"
             element={
@@ -98,7 +99,7 @@ function App() {
               <AddCocktail cocktails={cocktails} setCocktails={setCocktails} currentUser={currentUser}/>
             }
           />
-          <Route path="/random-cocktail" element={<GetRandomCocktail />} />
+          <Route path="/random-cocktail" element={<GetRandomCocktail mood={mood}/>} />
           <Route path="/edit-cocktail/:cocktailId" element={<EditCocktail cocktails={cocktails} setCocktails={setCocktails}/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const GetRandomCocktail = () => {
+const GetRandomCocktail = ({mood}) => {
   const [cocktail, setCocktail] = useState(null);
 
   useEffect(() => {
@@ -26,9 +26,10 @@ const GetRandomCocktail = () => {
 
   return (
     <div className="random-cocktail-page" key={cocktail.id}>
+      <p>Feeling {mood}?</p>
       <p>
-        Based on how you're feeling, this cocktail is just what you need! <br /> Enjoy
-        a sip that perfectly matches your mood and let it elevate your spirits
+        Enjoy a sip that perfectly matches your mood and let it elevate your
+        spirits:
       </p>
       <h1>{cocktail.strDrink}</h1>
       <Link to={`/cocktails/${cocktail.id}`}>

@@ -8,7 +8,7 @@ const Navbar = ({ currentUser }) => {
           <img src={logo}  alt="Logo" className='navbar-logo'/> 
       </Link>
 
-      <h1>Mood Cocktail Bar</h1>    
+      <h1>Mood Cocktails Bar</h1>    
 
       {/* {currentUser && <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>} */}
 
