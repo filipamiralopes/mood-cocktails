@@ -10,9 +10,22 @@ const Navbar = ({ currentUser }) => {
 
       <h1>Mood Cocktail Bar</h1>    
 
-     {currentUser && <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>}
-    </div>
-  )
-}
+      {/* {currentUser && <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>} */}
 
+      {currentUser && (
+        <div className='navbar-user-info'>
+          {currentUser.photo && (
+            <img 
+              src={currentUser.photo} 
+              alt="User" 
+              className='navbar-user-photo'
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          )}
+          <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>
+        </div>
+      )}
+    </div>
+  );
+};
 export default Navbar

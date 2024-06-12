@@ -19,8 +19,8 @@ const Footer = () => {
       </div>
       <div className="footer-detail">
         <h2>Opening Hour <span><img src={hour}  alt="Hour" className='footer-logo'/></span></h2>
-        <p>Monday - Friday: 5 PM - 11 PM</p>
-        <p>Sauturday - Sunday: 3 PM - 1 AM</p>
+        <p>Monday - Thursday: 5 PM - 11 PM</p>
+        <p>Friday, Saturday & Sunday: 3 PM - 2 AM</p>
       </div>
     </div>
   )
