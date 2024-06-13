@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const GetRandomCocktail = ({mood}) => {
   const [cocktail, setCocktail] = useState(null);
-
   useEffect(() => {
     fetchRandomCocktail();
   }, []);
@@ -25,14 +24,14 @@ const GetRandomCocktail = ({mood}) => {
   }
 
   return (
-    <div className="random-cocktail-page" key={cocktail.id}>
+    <div className="random-cocktail-page" key={cocktail.idDrink}>
       <h1>Feeling {mood}?</h1>
       <p>
         Enjoy a sip that perfectly matches your mood and let it elevate your
         spirits:
       </p>
       <h1>{cocktail.strDrink}</h1>
-      <Link to={`/cocktails/${cocktail.id}`}>
+      <Link to={`/cocktails/${cocktail.idDrink}`}>
 
         <img 
           src={cocktail.strDrinkThumb}

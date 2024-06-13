@@ -13,7 +13,7 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
   return (
     <div className="navbar">
       <Link to={"/"}>
-        <img src={logo} alt="Logo" style={{ width: "50px", height: "auto" }} />
+        <img src={logo} alt="Logo" style={{ width: "50px", height: "auto" }} className="navbar-logo"/>
       </Link>
 
       <h1>Mood Cocktails Bar</h1>
@@ -39,12 +39,12 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
               />
             </Link>
           )}
-          <span style={{ color: "black", paddingRight: "20px" }}>
+          <p style={{ color: "black", paddingRight: "20px" }}>
             Welcome, {currentUser.username}!
-          </span>
-          <span onClick={handleLogout} id="logout">
+          </p>
+          <p onClick={handleLogout} id="logout">
            / Logout
-          </span>
+          </p>
         </div>
       ) : (
         <Link to={"/login"}>

@@ -4,6 +4,7 @@ body {
   font-family: "Amatic SC", cursive;
   font-size: 20px;
   margin: 0;
+  max-width: 100vw;
 }
 
 /* Navbar */
@@ -16,14 +17,16 @@ body {
   width: 98vw;
   padding: 0 1vw;
   height: 7vh;
-  position: relative;
 }
 .navbar h1 {
   color: black;
   position: absolute;
-  left: 43%;
+  left: 53%;
   margin: 0;
   animation: fadeIn 5s forwards;
+}
+.navbar-logo{
+  margin-left: 120px;
 }
 
 @keyframes fadeIn {
@@ -42,13 +45,15 @@ body {
   left: 50%;
   margin: 0;
 }
-
+.navbar-user-info{
+  display: flex;
+}
 .navbar-user-photo {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 #logout:hover {
   text-decoration: underline;
@@ -303,8 +308,8 @@ body {
   font-size: 30px;
   display: flex;
   flex-direction: column;
-  min-width: 20vw;
-  max-width: 20vw;
+  min-width: 15vw;
+  max-width: 15vw;
   background-color: rgba(56, 48, 48, 0.3);
   color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -569,9 +574,11 @@ body {
 /*RANDOM COCKTAIL PAGE*/
 .random-cocktail-page {
   min-height: 93vh;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 26vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85vw;
+  /* margin: 0 26vh; */
   text-align: center;
 }
 .random-cocktail-page p {
@@ -781,4 +788,19 @@ body {
 
 .user-cocktail-list a:hover p {
   color: #d6a5a5;
+}
+
+/*Targets laptop screens (the above defaults to big screens*/
+@media (max-width: 1400px) {
+  .navbar h1 {
+    left: 52%;
+  }
+  .navbar-logo{
+    margin-left: 87px;
+  }
+  
+  .sidebar{
+    min-width: 20vw;
+    max-width: 20vw;
+  }
 }
