@@ -335,7 +335,7 @@ body {
 }
 .about-container-detail {
  width: 30%;
- height: 250px;
+ height: auto;
  background-color: rgb(240, 248, 255, 0.4);
  border-radius: 20px;
  padding: 30px;
