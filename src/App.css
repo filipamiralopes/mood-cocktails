@@ -376,12 +376,6 @@ body {
 .random-cocktail-page h1 {
   text-align: center;
 }
-.random-cocktail-page img, button {
-  margin-left: 65px;
-}
-.random-cocktail-page button {
-  margin-left: 125px;
-}
 
 /*PROFILE PAGE*/
 .profile-page {

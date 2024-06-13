@@ -13,8 +13,7 @@ const NotFoundPage = () => {
       <div className="not-found">
         <img src={spilled} alt="spilled drink" style={{ width: "250px" }} />
         <h1>404</h1>
-        <h2>Cocktail Not Found</h2>
-        <p>... maybe it spilled!</p>
+        <p>Cocktail Not Found... maybe it spilled!</p>
         <button onClick={handleGoHome}>Back to Bar</button>
       </div>
   );
