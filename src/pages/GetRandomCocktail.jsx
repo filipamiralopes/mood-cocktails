@@ -26,7 +26,7 @@ const GetRandomCocktail = ({mood}) => {
 
   return (
     <div className="random-cocktail-page" key={cocktail.id}>
-      <p>Feeling {mood}?</p>
+      <h1>Feeling {mood}?</h1>
       <p>
         Enjoy a sip that perfectly matches your mood and let it elevate your
         spirits:

@@ -12,14 +12,11 @@ const Login = ({ setCurrentUser }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            // fetch all users
             const { data } = await axios.get(`${API_URL}/users`);
-            // find the user with matching username
             const foundUser = data.find((oneUser) => oneUser.username.toLowerCase() === username.toLowerCase());
             if (!foundUser) {
                 setError("User does not exist. Would you like to sign up?");
             } else {
-                // check if the password matches
                 const doesPasswordMatch = foundUser.password === password;
                 if (doesPasswordMatch) {
                     setCurrentUser(foundUser);
@@ -35,9 +32,10 @@ const Login = ({ setCurrentUser }) => {
     };
 
     return (
-        <div className="home-page">
-            <h2>Login</h2>
-            <form onSubmit={handleLogin}>
+        <div className="login-page">
+            <div className='login-content'>
+            <h2>Welcome Back! Login to shake things up!</h2>
+            <form className="login-form" onSubmit={handleLogin}>
                 <label>
                     Username:
                     <input
@@ -57,6 +55,7 @@ const Login = ({ setCurrentUser }) => {
                 <button>Login</button>
             </form>
             {error && <p style={{ color: "red" }}>{error}</p>}
+            </div>
         </div>
     );
 };

@@ -10,7 +10,7 @@ body {
 /* Navbar */
 
 .navbar {
-  background-color: #d6a5a5;
+  background-image: linear-gradient(to right,#c58c8c,#ffe6e6,#c58c8c);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,9 +25,20 @@ body {
 .navbar h1 {
   color: black;
   position: absolute;
-  left: 50%;
+  left: 43%;
   margin: 0;
+  animation: fadeIn 5s forwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 6;
+  }
+}
+
 .navbar h3 {
   align-items: center;
   color: black;
@@ -68,6 +79,16 @@ body {
   text-align: left;
   width: 100vw;
   height: 100vh;
+  animation: moveBackground 50s linear infinite alternate; 
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0; 
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 .home-page-content {
@@ -83,11 +104,110 @@ body {
   font-size: 20px;
   font-family: 'Amatic SC', cursive; 
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page h1,
+.home-page p,
+.home-page input,
+.home-page button {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.home-page h1 {
+  animation-delay: 0.2s;
+}
+
+.home-page p {
+  animation-delay: 0.4s;
+}
+
+.home-page input {
+  animation-delay: 0.6s;
+}
+
+.home-page button {
+  animation-delay: 0.8s;
+}
+
+
 #get-cocktail-btn{
   background-color: #d6a5a5;
 }
 #get-cocktail-btn:hover{
   background-color: #CB7405;;
+}
+
+
+/*LOGIN*/
+.login-page {
+  min-height: 93vh;
+  background-image: url("./image/homePage.jpeg");
+  background-size: cover;
+  color: whitesmoke;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 85vw;
+  height: 100vh;
+}
+.login-content {
+  padding: 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 1.6s ease-in-out; 
+}
+
+.login-form {
+  margin-top : 30px;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  animation: fadeInUp 1.6s ease-in-out;
+}
+
+.login-form button {
+  margin-top: 70px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #121212;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #logout-message{
@@ -115,6 +235,68 @@ body {
   border-radius: 8px;
 }
 
+/*SIGN UP*/
+.signup-page {
+  min-height: 93vh;
+  background-image: url("./image/homePage.jpeg");
+  background-size: cover;
+  color: whitesmoke;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 85vw;
+  height: 100vh;
+}
+
+.signup-content {
+  padding: 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 1.6s ease-in-out; 
+}
+
+.signup-form {
+  margin-top : 30px;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  animation: fadeInUp 1.6s ease-in-out;
+}
+
+.signup-form button {
+  margin-top: 70px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #121212;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*SIDE BAR*/
 
 .sidebar {
@@ -130,26 +312,30 @@ body {
 
 .sidebar a {
   text-decoration: none;
-  padding: 16px 0;
+  padding: 20px 0;
 }
 
 .sidebar-list {
   display: flex;
   flex-direction: column;
-  padding: 5px 20px;
-  text-align: left;
+  padding: 7px 20px;
+  text-align: center;
   list-style-type: none;
+  transition: background-color 0.6s, color 0.6s;
 }
 
 .sidebar-list li a {
-  color: #d6a5a5;
+  color: #f6dfdf;
   display: block;
+  border-radius: 40px;
+  transition: transform 0.2s;
 }
 
 .sidebar-list li a:hover,
 .sidebar-list li a.active-link {
-  background-color: rgba(221, 221, 221, 0.5);
-  color: rgba(54, 5, 5, 0.8);
+  background-image: linear-gradient(#d6a5a5,#ffffffe1 , #d6a5a5);
+  color: rgba(20, 1, 1, 0.8);
+  transform: scale(1.05);
 }
 
 /*COCKTAIL LIST*/
@@ -377,10 +563,15 @@ body {
 .random-cocktail-page {
   min-height: 93vh;
   padding: 20px;
+  max-width: 600px;
+  margin: 0 26vh;
+  text-align: center;
 }
+
 .random-cocktail-page p{
   line-height: 30px;
 }
+
 
 /*PROFILE PAGE*/
 .profile-page {

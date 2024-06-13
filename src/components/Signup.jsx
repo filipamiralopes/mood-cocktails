@@ -14,7 +14,6 @@ const Signup = ({ setCurrentUser }) => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            // send a POST request to db backend
             const response = await axios.post(`${API_URL}/users`, { username, password });
             console.log('Signup response:', response.data);
             setCurrentUser(response.data); 
@@ -26,9 +25,11 @@ const Signup = ({ setCurrentUser }) => {
     };
 
     return (
-        <div className="home-page">
-            <h2>Signup</h2>
-            <form onSubmit={handleSignup}>
+        <div className="signup-page">
+            <div className='signup-content'>
+            <h2>Sign up now and start your mixology journey! 🥂 </h2>
+            <div>
+            <form className="signup-form" onSubmit={handleSignup}>
                 <label>
                     Username:
                     <input
@@ -47,7 +48,9 @@ const Signup = ({ setCurrentUser }) => {
                 </label>
                 <button type="submit">Sign Up</button>
             </form>
+            </div>
             {error && <p style={{ color: 'red' }}>{error}</p>}
+            </div>
         </div>
     );
 };
