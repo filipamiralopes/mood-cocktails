@@ -14,7 +14,6 @@ const EditCocktail = ({ cocktails, setCocktails }) => {
   const [strIngredient3, setIngredient3] = useState("");
   const [remarks, setRemarks] = useState("");
 
-  // const cocktail = cocktails.find((drink) => drink.id === cocktailId);
   useEffect(() => {
     const fetchCocktailData = async () => {
       try {

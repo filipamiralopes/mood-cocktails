@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
 
-const HomePage = ({ currentUser, mood, setMood}) => {
-
+const HomePage = ({ currentUser, mood, setMood }) => {
   const handleInputChange = (e) => {
     setMood(e.target.value);
   };
+  
   return (
     <div className="home-page">
       <div className="home-page-content">
@@ -23,7 +22,7 @@ const HomePage = ({ currentUser, mood, setMood}) => {
         </Link>
 
         {currentUser ? (
-          <h3 id="logout-message">Refresh the page to Logout</h3>
+          null
         ) : (
           <div className="login-signup">
             <div className="signup">

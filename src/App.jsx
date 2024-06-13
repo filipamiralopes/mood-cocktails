@@ -40,18 +40,6 @@ function App() {
     fetchCocktails();
   }, []);
 
-  useEffect(() => {
-    const checkLoggedInUser = async () => {
-      try {
-        const { data } = await axios.get(`${API_URL}/users`);
-        setCurrentUser(response.data.user);
-      } catch (error) {
-        setCurrentUser(null);
-      }
-    };
-    checkLoggedInUser();
-  }, []);
-
 
   function handleOrder(cocktail) {
     setOrderedCockails([...orderedCocktails, cocktail]);
@@ -71,7 +59,7 @@ function App() {
 
   return (
     <>
-      <Navbar currentUser={currentUser} />
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       <div className="body-page">
         <SideBar currentUser={currentUser}/>
 
@@ -103,7 +91,7 @@ function App() {
           <Route path="/edit-cocktail/:cocktailId" element={<EditCocktail cocktails={cocktails} setCocktails={setCocktails}/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
+          <Route path="/profile" element={<ProfilePage currentUser={currentUser} setCurrentUser={setCurrentUser}/>} />
           <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
           <Route path="/signup" element={<Signup setCurrentUser={setCurrentUser} />} />
           <Route path="/cocktails-for-you" element={<UserCocktail currentUser={currentUser} />} />
