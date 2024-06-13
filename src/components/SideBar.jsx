@@ -58,7 +58,7 @@ const SideBar = ({ currentUser }) => {
             </NavLink>
           ) : null}
         </li>
-        <li>
+        {/* <li>
           {currentUser ? (
             <NavLink
               to="/profile"
@@ -67,7 +67,7 @@ const SideBar = ({ currentUser }) => {
               Your Private Bar 👤
             </NavLink>
           ) : null}
-        </li>
+        </li> */}
       </ul>
     </div>
   );

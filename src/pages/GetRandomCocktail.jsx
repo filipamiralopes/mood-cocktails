@@ -33,7 +33,8 @@ const GetRandomCocktail = ({mood}) => {
       </p>
       <h1>{cocktail.strDrink}</h1>
       <Link to={`/cocktails/${cocktail.id}`}>
-        <img
+
+        <img 
           src={cocktail.strDrinkThumb}
           alt={cocktail.strDrink}
           style={{ width: "300px" }}
