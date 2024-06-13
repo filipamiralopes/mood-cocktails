@@ -45,7 +45,7 @@ const CocktailList = ({ cocktails, setCocktails }) => {
       {error && <p style={{ color: "red" }}>{error}</p>}
       <div className="cocktail-list-grid user-cocktail-list">
         {searchState !== "" &&
-          searchResults !== null &&
+          searchResults !== null ?
           searchResults.map((oneCocktail) => (
             <Link
               to={`/cocktails/${oneCocktail.idDrink}`}
@@ -56,18 +56,25 @@ const CocktailList = ({ cocktails, setCocktails }) => {
                 searchResults={searchResults}
               />
             </Link>
-          ))}
+          ))
+          : (cocktails.map((oneCocktail) => {
+            return (
+              <Link to={`/cocktails/${oneCocktail.id}`} key={oneCocktail.id}>
+                <CocktailCard cocktail={oneCocktail} />
+              </Link>
+            );
+          }))}
       </div>
 
-      <div className="cocktail-list-grid user-cocktail-list">
-        {cocktails.map((oneCocktail) => {
+      {/* <div className="cocktail-list-grid user-cocktail-list">
+        {(cocktails.map((oneCocktail) => {
           return (
             <Link to={`/cocktails/${oneCocktail.id}`} key={oneCocktail.id}>
               <CocktailCard cocktail={oneCocktail} />
             </Link>
           );
-        })}
-      </div>
+        }))}
+      </div> */}
     </div>
   );
 };

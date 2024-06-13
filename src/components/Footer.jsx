@@ -1,6 +1,9 @@
 import logo from '../image/logo.png'
 import follow from '../image/follow-us.png'
 import hour from '../image/opening-hours.png'
+import facebook from '../image/facebook.png'
+import twitter from '../image/twitter.png'
+import instagram from '../image/instagram.png'
 
 const Footer = () => {
   return (
@@ -13,9 +16,18 @@ const Footer = () => {
       </div>
       <div className="footer-detail">
         <h2>Follow Us <span><img src={follow}  alt="Follow" className='footer-logo'/></span></h2>
-        <p>Facebook: <a href="https://facebook.com/moodcocktailbar" target="_blank" rel="noopener noreferrer">Mood Cocktail Bar</a></p>
-        <p>Twitter: <a href="https://twitter.com/moodcocktailbar" target="_blank" rel="noopener noreferrer">@MoodCocktailBar</a></p>
-        <p>Instagram: <a href="https://instagram.com/moodcocktailbar" target="_blank" rel="noopener noreferrer">@MoodCocktailBar</a></p>
+        <p>
+          <a href="https://facebook.com/moodcocktailbar"><img src={facebook} alt="Facebook Logo" className='footer-logo'/></a> 
+          <a href="https://facebook.com/moodcocktailbar" target="_blank" rel="noopener noreferrer">Mood Cocktail Bar</a>
+        </p>
+        <p>
+          <a href="https://twitter.com/moodcocktailbar"><img src={twitter} alt="Twitter Logo" className='footer-logo'/></a>
+          <a href="https://twitter.com/moodcocktailbar" target="_blank" rel="noopener noreferrer">@MoodCocktailBar</a>
+        </p>
+        <p>
+          <a href="https://instagram.com/moodcocktailbar"><img src={instagram} alt="Instagram Logo" className='footer-logo'/></a>
+          <a href="https://instagram.com/moodcocktailbar" target="_blank" rel="noopener noreferrer">@MoodCocktailBar</a>
+        </p>
       </div>
       <div className="footer-detail">
         <h2>Opening Hour <span><img src={hour}  alt="Hour" className='footer-logo'/></span></h2>
