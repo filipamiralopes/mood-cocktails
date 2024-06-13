@@ -1,16 +1,19 @@
 import logo from '../image/logo.png'
+import userLogo from '../image/user-logo.png'
 import { Link } from 'react-router-dom'
 
 const Navbar = ({ currentUser }) => {
   return (
     <div className='navbar'>
       <Link to={"/"}>
-          <img src={logo}  alt="Logo" className='navbar-logo' style={{width: "50px", height: "auto"}}/> 
+          <img src={logo}  alt="Logo" style={{width: "50px", height: "auto"}}/> 
       </Link>
 
       <h1>Mood Cocktails Bar</h1>    
 
-      {/* {currentUser && <span style={{color: 'black', paddingRight: '20px'}}>Welcome, {currentUser.username}!</span>} */}
+      <Link to={"/login"}>
+          <img src={userLogo}  alt="user logo" style={{width: "auto", height: "35px"}}/> 
+      </Link>
 
       {currentUser && (
         <div className='navbar-user-info'>

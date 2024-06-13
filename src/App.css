@@ -19,9 +19,6 @@ body {
   height: 7vh;
   position: relative;
 }
-.navbar-logo {
-  height: 40px; 
-} 
 .navbar h1 {
   color: black;
   position: absolute;
