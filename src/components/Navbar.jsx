@@ -26,7 +26,7 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
                 src={currentUser.photo}
                 alt="User"
                 className="navbar-user-photo"
-                style={{ width: "30px", height: "30px", borderRadius: "50%" }}
+                style={{ width: "30px", height: "30px", borderRadius: "50%", objectFit: "cover"}}
               />
             </Link>
           ) : (

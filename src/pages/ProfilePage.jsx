@@ -62,7 +62,7 @@ const ProfilePage = ({ currentUser, setCurrentUser }) => {
           <img
             src={photo}
             alt="User"
-            style={{ width: "100px", height: "100px", borderRadius: "50%" }}
+            style={{ width: "100px", height: "100px", borderRadius: "50%", objectFit: "cover"}}
           />
         )}
       </div>
