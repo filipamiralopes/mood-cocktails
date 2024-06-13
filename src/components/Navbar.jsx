@@ -5,7 +5,7 @@ const Navbar = ({ currentUser }) => {
   return (
     <div className='navbar'>
       <Link to={"/"}>
-          <img src={logo}  alt="Logo" className='navbar-logo'/> 
+          <img src={logo}  alt="Logo" className='navbar-logo' style={{width: "70px", height: "auto"}}/> 
       </Link>
 
       <h1>Mood Cocktails Bar</h1>    
