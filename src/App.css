@@ -1,9 +1,8 @@
-
 body {
   background-color: #121212;
   color: #ffffff;
-  font-family: 'Amatic SC', cursive;
-  font-size: 20px; 
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -40,7 +39,7 @@ body {
   margin-right: 10px;
   margin-top: 10px;
 }
-#logout:hover{
+#logout:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -76,28 +75,28 @@ body {
   flex-direction: column;
   padding: 40px;
   margin-top: 60px;
-  margin-left: 100px
+  margin-left: 100px;
 }
-.home-page-content input{
+.home-page-content input {
   width: 20%;
   height: 30px;
   font-size: 20px;
-  font-family: 'Amatic SC', cursive; 
+  font-family: "Amatic SC", cursive;
 }
-#get-cocktail-btn{
+#get-cocktail-btn {
   background-color: #d6a5a5;
 }
-#get-cocktail-btn:hover{
+#get-cocktail-btn:hover {
   background-color: #e05a50;
 }
 
-.login-signup{
+.login-signup {
   margin-top: 100px;
   display: flex;
   justify-content: left;
   align-items: left;
 }
-.login{
+.login {
   margin-left: 110px;
 }
 
@@ -237,7 +236,7 @@ body {
 
 .add-cocktail-form {
   min-height: 93vh;
-  background-color: #2b2b2b; 
+  background-color: #2b2b2b;
   margin: 10px 80px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -249,7 +248,7 @@ body {
 .add-cocktail-form h3 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: #d6a5a5; 
+  color: #d6a5a5;
   text-align: center;
 }
 
@@ -274,8 +273,8 @@ body {
   border: 1px solid #383030;
   background-color: #333;
   color: #ffffff;
-  font-size: 25px; 
-  font-family: 'Amatic SC', cursive; 
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
 }
 
 .add-cocktail-form .textarea-remarks {
@@ -299,7 +298,7 @@ body {
   font-size: 25px;
   cursor: pointer;
   transition: background 0.3s;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 .add-cocktail-form button:hover {
@@ -335,20 +334,19 @@ body {
   flex-direction: column;
 }
 .about-container {
- 
-  padding-left: 20px ;
+  padding-left: 20px;
   display: flex;
   justify-content: space-between;
 }
 .about-container-detail {
- width: 50%;
+  width: 50%;
 }
 .about-team {
   width: 50%;
   margin-left: 400px;
 }
 .about-team a {
-  color:  rgba(220, 148, 177, 0.718);
+  color: rgba(220, 148, 177, 0.718);
   text-decoration: none;
 }
 .git-logo {
@@ -361,35 +359,42 @@ body {
   align-items: center;
   padding-top: 50px;
 }
-.about-image  img{
+.about-image img {
   width: 1000px;
-  height: 700px; 
+  height: 700px;
   border-radius: 10px;
 }
-
 
 /*RANDOM COCKTAIL PAGE*/
 .random-cocktail-page {
   min-height: 93vh;
   padding: 20px;
 }
-.random-cocktail-page p{
+.random-cocktail-page p {
   line-height: 30px;
+}
+.random-cocktail-page h1 {
+  text-align: center;
+}
+.random-cocktail-page img, button {
+  margin-left: 65px;
+}
+.random-cocktail-page button {
+  margin-left: 125px;
 }
 
 /*PROFILE PAGE*/
 .profile-page {
   min-height: 93vh;
   padding: 2px 30px;
-  color: #ffffff; 
+  color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  font-family: 'Amatic SC', cursive; 
+  align-items: center;
+  font-family: "Amatic SC", cursive;
   margin: 10px 80px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   width: 50%;
-
 }
 
 .profile-page h2 {
@@ -414,8 +419,6 @@ body {
   background-color: #2b2b2b;
   padding: 20px;
 }
-
-
 
 /* Footer */
 .footer {
@@ -457,8 +460,8 @@ body {
   border: 1px solid #383030;
   background-color: #333;
   color: #ffffff;
-  font-size: 25px; 
-  font-family: 'Amatic SC', cursive; 
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
 }
 
 .profile-page button {
@@ -484,7 +487,7 @@ body {
 
 /*NOT FOUND*/
 
-.not-found{
+.not-found {
   min-height: 93vh;
   display: flex;
   flex-direction: column;
@@ -500,16 +503,16 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #121212; 
-  color: #ffffff; 
+  background-color: #121212;
+  color: #ffffff;
   margin: 10px 90px;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   min-height: 93vh;
 }
 
 .user-cocktail h1 {
   font-size: 2.5em;
-  color: #d6a5a5; 
+  color: #d6a5a5;
   margin-bottom: 50px;
 }
 
@@ -518,7 +521,7 @@ body {
   color: #d6a5a5;
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   border: 1px solid #383030;
   border-radius: 8px;
   padding: 30px;
@@ -535,7 +538,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2b2b2b; 
+  background-color: #2b2b2b;
   border: 1px solid #383030;
   border-radius: 8px;
   padding: 10px;
@@ -557,7 +560,7 @@ body {
 
 .user-cocktail-list p {
   font-size: 1.2em;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .user-cocktail-list a {
@@ -566,5 +569,5 @@ body {
 }
 
 .user-cocktail-list a:hover p {
-  color: #d6a5a5; 
+  color: #d6a5a5;
 }
