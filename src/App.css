@@ -482,7 +482,9 @@ body {
   text-align: center;
 }
 
-.user-not-found{
+/*NOT FOUND*/
+
+.not-found{
   min-height: 93vh;
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@ const ProfilePage = ({ currentUser, setCurrentUser }) => {
   const navigate = useNavigate();
   if (!currentUser){
     return(
-      <div className="user-not-found">
+      <div className="not-found">
         <img src={spilled} alt="spilled drink" style={{width: "250px"}}/>
         <h2>User not found</h2>
         <br/>
