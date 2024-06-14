@@ -1,4 +1,4 @@
-<img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
+<img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/> <img src="/src/image/logo.png" alt="Mood Cocktails Bar Logo" width="100p"/>
 
 # Mood Cocktails - a website for a bar
 Welcome to Mood Cocktails, where every sip tells a story. Born in the fiery pits of a weekend coding bootcamp, three spirited adventurers (literally) mixed their skills to create an app that matches your mood with the perfect cocktail.
