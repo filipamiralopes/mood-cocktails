@@ -12,7 +12,7 @@ https://mood-cocktails.netlify.app/ *
 
 ## Description
 - Single Page Application (SPA) with React and multiple views (Routes)
-- Mocked database (json-server: [here](https://github.com/filipamiralopes/mood-cocktails-backend)) with users and hundreds of cocktails. Deployed with adaptable.io ([here](https://mood-cocktails-db.adaptable.app/))
+- Mocked database (json-server: [here](https://github.com/dalfang/mood-cocktails-backend)) with users and hundreds of cocktails. Deployed with adaptable.io ([here](https://mood-cocktails-db.adaptable.app/))
 - Interaction with external API: [thecocktaildb.com](https://www.thecocktaildb.com/api.php)
 - C.R.U.D. operations: create, read, update, and delete cocktails, as well as users
 
