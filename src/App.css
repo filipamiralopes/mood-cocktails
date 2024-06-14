@@ -347,6 +347,7 @@ body {
 
 .cocktail-list {
   padding: 20px;
+  min-height: 93vh;
 }
 .cocktail-list-grid a {
   text-decoration: none;
@@ -586,6 +587,10 @@ body {
 }
 .random-cocktail-page h1 {
   text-align: center;
+}
+.loading{
+  min-height: 93vh;
+  padding: 20px;
 }
 
 
